@@ -594,124 +594,166 @@ new Swiper(".about-company-slider", {
    },
 });
 
-
+// <!-- Team Member Swiper Slider-->
+var swiper = new Swiper(".mySwiper2", {
+   slidesPerView: 1,
+   spaceBetween: 10,
+   loop: true,
+   // autoplay: true,
+   autoplaySpeed: 1000,
+   // pagination: {
+   //   el: ".swiper-pagination",
+   //   clickable: true,
+   // },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+ 
+   breakpoints: {
+     640: {
+       slidesPerView: 1,
+       spaceBetween: 20,
+     },
+     768: {
+       slidesPerView: 1,
+       spaceBetween: 20,
+     },
+     1024: {
+       slidesPerView: 1,
+       spaceBetween: 20,
+     },
+     414: {
+       slidesPerView: 1,
+       spaceBetween: 10,
+     },
+     360: {
+       slidesPerView: 1,
+       spaceBetween: 10,
+     },
+     320: {
+       slidesPerView: 1,
+       spaceBetween: 8,
+     },
+   },
+ });
  // Team Slider Single image on left side
- if ($(".team-section").hasClass("team-section-two")) {
-   new Swiper(".team-member-slider-2", {
-      loop: true,
-      navigation: {  
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-      },
-   });
-}
+//  if ($(".team-section").hasClass("team-section-two")) {
+//    new Swiper(".team-member-slider-2", {
+//       loop: true,
+//       navigation: {  
+//          nextEl: '.swiper-button-next',
+//          prevEl: '.swiper-button-prev',
+//       },
+//    });
+// }
 
 // Team Member Sliders Includes 2 Slider One For Team Photo And Other For Team Detail
-if ($(".team-section").hasClass("team-section-one")) {
-   // 1. Slider Team Photo rotating
-   var teammemberslider = new Swiper(".team-member-slider", {
-      slidesPerView: 3,
-      allowTouchMove: false,
-      centeredSlides: true,
-      loop: true,
-      slideToClickedSlide: true,
-      effect: 'coverflow',
-      coverflow: {
-         rotate: 0,
-         stretch: 100,
-         depth: 200,
-         modifier: 1,
-         slideShadows: false
-      },
-      breakpoints: {
-         // when window width is <= 768px
-         768: {
-            slidesPerView: 1,
-            centeredSlides: false,
-            effect: "slide",
-            allowTouchMove: true,
-         }
-      }
-   });
+// if ($(".team-section").hasClass("team-section-one")) {
+//    // 1. Slider Team Photo rotating
+//    var teammemberslider = new Swiper(".team-member-slider", {
+//       slidesPerView: 3,
+//       allowTouchMove: false,
+//       centeredSlides: true,
+//       loop: true,
+//       slideToClickedSlide: true,
+//       effect: 'coverflow',
+//       coverflow: {
+//          rotate: 0,
+//          stretch: 100,
+//          depth: 200,
+//          modifier: 1,
+//          slideShadows: false
+//       },
+//       breakpoints: {
+//          // when window width is <= 768px
+//          768: {
+//             slidesPerView: 1,
+//             centeredSlides: false,
+//             effect: "slide",
+//             allowTouchMove: true,
+//          }
+//       }
+//    });
 
-   // 2. Slider Team Detail
-   var teammemberanimation = $('.team-member-progress-detail').first();
-   teammemberanimation.show();
-   teammemberanimation.addClass('animated ' + teammemberanimation.data('animate'));
-   var teammembersliderdetail = new Swiper(".team-member-detail-slider", {
-      on: {
-         slideChangeTransitionStart: function () {
-            var $this = $(this);
-            var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
-            maping.map(function (k, v) {
-               var target = $(v);
-               target.hide();
-               target.removeClass('animated ' + target.data('animate'));
-            });
-         },
-         slideChangeTransitionEnd: function () {
-            var $this = $(this);
-            var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
-            maping.map(function (k, v) {
-               var target = $(v);
-               target.show();
-               target.addClass('animated ' + target.data('animate'));
-            });
-         }
-      },
-      allowTouchMove: false,
-      loop: true,
-      loopSlides: 3,
-      slidesPerView: "auto",
-      slideToClickedSlide: true,
-      breakpoints: {
-         768: {
-            slidesPerView: 1,
-         }
-      }
-   });
-   teammemberslider.controller.control = teammembersliderdetail;
-   teammembersliderdetail.controller.control = teammemberslider;
-}
+//    // 2. Slider Team Detail
+//    var teammemberanimation = $('.team-member-progress-detail').first();
+//    teammemberanimation.show();
+//    teammemberanimation.addClass('animated ' + teammemberanimation.data('animate'));
+//    var teammembersliderdetail = new Swiper(".team-member-detail-slider", {
+//       on: {
+//          slideChangeTransitionStart: function () {
+//             var $this = $(this);
+//             var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
+//             maping.map(function (k, v) {
+//                var target = $(v);
+//                target.hide();
+//                target.removeClass('animated ' + target.data('animate'));
+//             });
+//          },
+//          slideChangeTransitionEnd: function () {
+//             var $this = $(this);
+//             var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
+//             maping.map(function (k, v) {
+//                var target = $(v);
+//                target.show();
+//                target.addClass('animated ' + target.data('animate'));
+//             });
+//          }
+//       },
+//       allowTouchMove: false,
+//       loop: true,
+//       loopSlides: 3,
+//       slidesPerView: "auto",
+//       slideToClickedSlide: true,
+//       breakpoints: {
+//          768: {
+//             slidesPerView: 1,
+//          }
+//       }
+//    });
+//    teammemberslider.controller.control = teammembersliderdetail;
+//    teammembersliderdetail.controller.control = teammemberslider;
+// }
 
 
 // Sponsors Slider
-new Swiper(".sponsors-slider-inner", {
-   slidesPerView: "5",
-   spaceBetween: 0,
-   loop: true,
-   autoplay: {
-      delay: 1000,
-   },
-   breakpoints: {
-      1200: {
-         slidesPerView: 4,
-      },
-      992: {
-         slidesPerView: 3,
-      },
-      550: {
-         slidesPerView: 2,
-         spaceBetween: 0,
-      },
-      480: {
-         slidesPerView: 1,
-         spaceBetween: 0,
-      }
-   }
-});
+// new Swiper(".sponsors-slider-inner", {
+//    slidesPerView: "5",
+//    spaceBetween: 0,
+//    loop: true,
+//    autoplay: {
+//       delay: 1000,
+//    },
+//    breakpoints: {
+//       1200: {
+//          slidesPerView: 4,
+//       },
+//       992: {
+//          slidesPerView: 3,
+//       },
+//       550: {
+//          slidesPerView: 2,
+//          spaceBetween: 0,
+//       },
+//       480: {
+//          slidesPerView: 1,
+//          spaceBetween: 0,
+//       }
+//    }
+// });
 
 // Blog Listing Image Slider
-new Swiper(".blog-listing-image-slider", {
-   pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-   },
-   effect: 'fade',
-   autoplay: {
-      delay: 3000,
-   },
-});
+// new Swiper(".blog-listing-image-slider", {
+//    pagination: {
+//       el: '.swiper-pagination',
+//       type: 'bullets',
+//       clickable: true
+//    },
+//    effect: 'fade',
+//    autoplay: {
+//       delay: 3000,
+//    },
+// });
 
 

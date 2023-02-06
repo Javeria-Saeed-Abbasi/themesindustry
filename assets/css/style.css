@@ -2029,12 +2029,8 @@ p {
     background: #11b0cc;
     color: #ffffff;
 }
-.team-member-slider-2 .swiper-button-next, .team-member-slider-2 .swiper-button-prev{
-top:210rem !important;
-}
-/* Stats Section Styling Start */
-.stats-heading {
-   padding-top: 10px;
+.team-member-slider-2 .swiper-button-prev:after, .team-member-slider-2 .swiper-button-next:after { 
+font-size: 20px !important;
 }
 .stats-block-inner i,
 .stats-number-inner {
@@ -3004,7 +3000,9 @@ top:210rem !important;
     .team-member-outer {
         width: 70%;
     }
-   
+   .team-member-slider-2 .mySwiper2 .swiper-slide {
+    width: 696px!important;
+   }
    /*Pricing*/
     .pricing-table-inner.active {
         margin: 50px auto;
@@ -3081,6 +3079,15 @@ top:210rem !important;
     }
     .company-contact-detail {
         padding-left: 25px;
+    }
+   
+.team-member-slider-2 .mySwiper2 .swiper-slide {
+    width: 396px!important;
+}
+}
+@media only screen and (max-width: 540px) {
+    .team-member-slider-2 .mySwiper2 .swiper-slide {
+        width: 346px!important;
     }
 }
 /* ============================================  Main Banner Slider   ========================================================== */
