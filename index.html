@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="./assets/css/cubeportfolio.min.css" />
+    <link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./assets/css/animate.css" />
     <!-- Font Awesome 6 -->
     <link
@@ -1668,7 +1669,6 @@
                         animation-name: fadeInUp;
                       "
                     >
-               
                       <i class="far fa-hand-point-right text-color-dark"></i>
                       <div
                         class="stats-number-inner text-color-dark fontface-one font-weight-700 padding-top-20"
@@ -1694,7 +1694,11 @@
                       "
                     >
                       <!-- <i class="ti-bar-chart text-color-dark"></i> -->
-                      <i class="fas fa-chart-bar text-color-dark"  style="rotate: -89deg"  aria-hidden="true"></i>
+                      <i
+                        class="fas fa-chart-bar text-color-dark"
+                        style="rotate: -89deg"
+                        aria-hidden="true"
+                      ></i>
                       <div
                         class="stats-number-inner text-color-dark fontface-one font-weight-700 padding-top-20"
                       >
@@ -1773,125 +1777,369 @@
           </div>
         </section>
         <!-- Cube Portfolio -->
-        <section class="company-portfolio-section padding-top-bottom" id="company-portfolio-section">
+        <section
+          class="company-portfolio-section padding-top-bottom"
+          id="company-portfolio-section"
+        >
           <div class="container">
-             <div class="section-heading">
-                <div class="row">
-                   <div class="col-lg-6 wow fadeInUp" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
-                      <p class="fontface-two text-color-secondary paragraph-14 padding-bottom-25">Our Creative Portfolio</p>
-                      <h2 class="fontface-one text-color-dark padding-bottom-35">Amazing <span class="text-color-dark font-weight-700 ">Work</span></h2>
-                   </div>
-                   <div class="col-lg-12">
-                      <div id="js-filters-mosaic" class="cbp-l-filters-button wow fadeInUp" data-wow-delay="350ms" style="visibility: visible; animation-delay: 350ms; animation-name: fadeInUp;">
-                         <div data-filter="*" class="cbp-filter-item"> All</div>
-                         <div class="cbp-divider"> |</div>
-                         <div data-filter=".print" class="cbp-filter-item">Print</div>
-                         <div class="cbp-divider">|</div>
-                         <div data-filter=".web-design" class="cbp-filter-item">Web Design</div>
-                         <div class="cbp-divider"> |</div>
-                         <div data-filter=".motion" class="cbp-filter-item cbp-filter-item-active"> Motion</div>
-                         <div class="cbp-divider"> |</div>
-                         <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
-                      </div>
- 
-                      <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic cbp-caption-active cbp-caption-zoom cbp-ready" style="height: 426px;"><div class="cbp-wrapper-outer"><div class="cbp-wrapper">
-                         <div class="cbp-item graphic cbp-item-off" style="width: 480px; left: 0px; top: 0px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-2.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-2.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Branding Work</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some Branding Ideas</p>
-                         </div></div>
- 
-                         <div class="cbp-item motion" style="width: 480px; left: 0px; top: 0px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-1.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-1.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Photography</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">A Little Detail Here</p>
-                         </div></div>
- 
-                         <div class="cbp-item print web-design cbp-item-off" style="width: 480px; left: 0px; top: 0px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-4.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-4.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Animation Project</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some Animated Ideas</p>
-                         </div></div>
- 
-                         <div class="cbp-item web-design even cbp-item-off" style="width: 480px; left: 630px; top: 0px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-3.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-3.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Development Project</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some Development Ideas</p>
-                         </div></div>
- 
-                         <div class="cbp-item print cbp-item-off" style="width: 480px; left: 0px; top: 1249px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-6.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-6.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">SEO Work</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some SEO Ideas</p>
-                         </div></div>
- 
-                         <div class="cbp-item graphic even cbp-item-off" style="width: 480px; left: 630px; top: 1299px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-7.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-7.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
- </div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Branding Work</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some Branding Ideas</p>
-                         </div></div>
-                         
-                         <div class="cbp-item motion even" style="width: 480px; left: 630px; top: 0px;"><div class="cbp-item-wrapper">
-                            <a href="./assets/images/portfolio-5.jpg" class="cbp-caption cbp-lightbox" data-title="Workout Buddy<br>by Tiberiu Neamu">
-                               <div class="cbp-caption-defaultWrap">
-                                  <img src="./assets/images/portfolio-5.jpg" alt="">
-                               </div>
-                               <div class="cbp-caption-activeWrap portfolio-hover-effect"><i class="fa fa-search-plus" aria-hidden="true"></i>
-</div>
-                            </a>
-                            <h3 class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15">Architecture Work</h3>
-                            <p class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text">Some Architect Ideas</p>
-                         </div></div>
-                      </div></div></div>
- 
-                      <div id="js-loadMore-lightbox-gallery" class="cbp-l-loadMore-button wow fadeInUp d-none" data-wow-delay="650ms" style="visibility: visible; animation-delay: 650ms; animation-name: fadeInUp;">
-                         <a href="portfolio-loadfile/index.html " class="cbp-l-loadMore-link button-setting button-setting-primary background-secondary text-color-white" rel="nofollow">
-                            <span class="cbp-l-loadMore-defaultText">Load More</span>
-                            <span class="cbp-l-loadMore-loadingText">Loading...</span>
-                            <span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
-                         </a>
-                      </div>
-                   </div>
+            <div class="section-heading">
+              <div class="row">
+                <div
+                  class="col-lg-6 wow fadeInUp"
+                  data-wow-delay="300ms"
+                  style="
+                    visibility: visible;
+                    animation-delay: 300ms;
+                    animation-name: fadeInUp;
+                  "
+                >
+                  <p
+                    class="fontface-two text-color-secondary paragraph-14 padding-bottom-25"
+                  >
+                    Our Creative Portfolio
+                  </p>
+                  <h2 class="fontface-one text-color-dark padding-bottom-35">
+                    Amazing
+                    <span class="text-color-dark font-weight-700">Work</span>
+                  </h2>
                 </div>
-             </div>
+                <div class="col-lg-12">
+                  <div
+                    id="js-filters-mosaic"
+                    class="cbp-l-filters-button wow fadeInUp"
+                    data-wow-delay="350ms"
+                    style="
+                      visibility: visible;
+                      animation-delay: 350ms;
+                      animation-name: fadeInUp;
+                    "
+                  >
+                    <div data-filter="*" class="cbp-filter-item cbp-filter-item-active">All</div>
+                    <div class="cbp-divider">|</div>
+                    <div data-filter=".print" class="cbp-filter-item">
+                      Print
+                    </div>
+                    <div class="cbp-divider">|</div>
+                    <div data-filter=".web-design" class="cbp-filter-item">
+                      Web Design
+                    </div>
+                    <div class="cbp-divider">|</div>
+                    <div
+                      data-filter=".motion"
+                      class="cbp-filter-item"
+                    >
+                      Motion
+                    </div>
+                    <div class="cbp-divider">|</div>
+                    <div data-filter=".graphic" class="cbp-filter-item">
+                      Graphic
+                    </div>
+                  </div>
+
+                  <div
+                    id="js-grid-mosaic"
+                    class="cbp cbp-l-grid-mosaic cbp-caption-active cbp-caption-zoom cbp-ready"
+                    style="height: 426px"
+                  >
+                    <div class="cbp-wrapper-outer">
+                      <div class="cbp-wrapper">
+                        <div
+                          class="cbp-item graphic cbp-item-off"
+                          style="width: 480px; left: 0px; top: 0px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-2.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Branding Work
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some Branding Ideas
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item motion"
+                          style="width: 480px; left: 0px; top: 0px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-1.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Photography
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              A Little Detail Here
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item print web-design cbp-item-off"
+                          style="width: 480px; left: 0px; top: 0px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-4.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-4.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Animation Project
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some Animated Ideas
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item web-design even cbp-item-off"
+                          style="width: 480px; left: 630px; top: 0px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-3.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-3.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Development Project
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some Development Ideas
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item print cbp-item-off"
+                          style="width: 480px; left: 0px; top: 1249px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-6.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-6.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              SEO Work
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some SEO Ideas
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item graphic even cbp-item-off"
+                          style="width: 480px; left: 630px; top: 1299px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-7.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-7.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Branding Work
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some Branding Ideas
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="cbp-item motion even"
+                          style="width: 480px; left: 630px; top: 0px"
+                        >
+                          <div class="cbp-item-wrapper">
+                            <a
+                              href="./assets/images/portfolio-5.jpg"
+                              class="cbp-caption cbp-lightbox"
+                              data-title="Workout Buddy<br>by Tiberiu Neamu"
+                            >
+                              <div class="cbp-caption-defaultWrap">
+                                <img
+                                  src="./assets/images/portfolio-5.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div
+                                class="cbp-caption-activeWrap portfolio-hover-effect"
+                              >
+                                <i
+                                  class="fa fa-search-plus"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </a>
+                            <h3
+                              class="fontface-one font-weight-500 portfolio-heading-text padding-top-30 padding-bottom-15"
+                            >
+                              Architecture Work
+                            </h3>
+                            <p
+                              class="fontface-two paragraph-18 font-weight-500 portfolio-detail-text"
+                            >
+                              Some Architect Ideas
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    id="js-loadMore-lightbox-gallery"
+                    class="cbp-l-loadMore-button wow fadeInUp d-none"
+                    data-wow-delay="650ms"
+                    style="
+                      visibility: visible;
+                      animation-delay: 650ms;
+                      animation-name: fadeInUp;
+                    "
+                  >
+                    <a
+                      href="portfolio-loadfile/index.html "
+                      class="cbp-l-loadMore-link button-setting button-setting-primary background-secondary text-color-white"
+                      rel="nofollow"
+                    >
+                      <span class="cbp-l-loadMore-defaultText">Load More</span>
+                      <span class="cbp-l-loadMore-loadingText">Loading...</span>
+                      <span class="cbp-l-loadMore-noMoreLoading"
+                        >No More Works</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
-       </section>
+        </section>
         <!-- Main section ends -->
       </section>
       <!-- Page Wrapper Ends -->
@@ -1916,12 +2164,16 @@
             this.value + "%";
         });
     </script>
-    <script src="./assets/js/swiper-bundle.min.js"></script>
+    
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/jquery-3.6.3.min.js"></script>
+    <!-- <script src="./assets/js/jquery-3.6.3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="https://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="./assets/js/jquery.fancybox.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/script.js"></script>
+  
   </body>
 </html>
