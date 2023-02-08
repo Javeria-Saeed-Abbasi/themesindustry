@@ -47,7 +47,7 @@ jQuery(function ($) {
 
 
 
-   // Click Scroll Function
+   // Click Scroll to Top Function
    $(".scroll").on('click', function (event) {
       event.preventDefault();
       $("html,body").animate({
@@ -142,20 +142,16 @@ jQuery(function ($) {
    });
    }
    
-
-   
-   
-
    // Pricing Table Hover Function Toggle
-   // $(".pricing-table-inner").hover(function () {
-   //    if ($window.width() > 768) {
-   //       $(".pricing-table-inner.main").removeClass("active");
-   //       $(this).addClass("active");
-   //    }
-   // }, function () {
-   //    $(this).removeClass("active");
-   //    $(".pricing-table-inner.main").addClass("active");
-   // });
+   $(".pricing-table-inner").hover(function () {
+      if ($window.width() > 768) {
+         $(".pricing-table-inner.main").removeClass("active");
+         $(this).addClass("active");
+      }
+   }, function () {
+      $(this).removeClass("active");
+      $(".pricing-table-inner.main").addClass("active");
+   });
 
 
 
@@ -391,101 +387,102 @@ $(window).scroll(testScroll);
 
 
 
-   // Cube Portfolio Initializing
-   $('#js-grid-mosaic').cubeportfolio({
-         filters: '#js-filters-mosaic',
-         layoutMode: 'grid',
-         sortByDimension: true,
-         mediaQueries: [{
-            width: 1500,
-            cols: 2,
-        }, {
-            width: 1100,
-            cols: 2,
-        }, {
-            width: 768,
-            cols: 1,
-        }, {
-            width: 480,
-            cols: 1,
-            options: {
-               gapHorizontal: 60
-            }
-        }],
-         defaultFilter: '*',
-         animationType: 'fadeOut',
-         gapHorizontal: 120,
-         gapVertical: 150,
-         gridAdjustment: 'responsive',
-         caption: 'zoom',
+   // // Cube Portfolio Initializing
+   // $('#js-grid-mosaic-flat').cubeportfolio({
+   //       filters: '#js-filters-mosaic',
+   //       layoutMode: 'grid',
+   //       sortByDimension: true,
+   //       mediaQueries: [{
+   //          width: 1500,
+   //          cols: 2,
+   //      }, {
+   //          width: 1100,
+   //          cols: 2,
+   //      }, {
+   //          width: 768,
+   //          cols: 1,
+   //      }, {
+   //          width: 480,
+   //          cols: 1,
+   //          options: {
+   //             gapHorizontal: 60
+   //          }
+   //      }],
+   //       defaultFilter: '*',
+   //       animationType: 'fadeOut',
+   //       gapHorizontal: 120,
+   //       gapVertical: 150,
+   //       gridAdjustment: 'responsive',
+   //       caption: 'zoom',
 
-         // lightbox
-         lightboxDelegate: '.cbp-lightbox',
-         lightboxGallery: true,
-         lightboxTitleSrc: 'data-title',
-         lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+   //       // lightbox
+   //       lightboxDelegate: '.cbp-lightbox',
+   //       lightboxGallery: true,
+   //       lightboxTitleSrc: 'data-title',
+   //       lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
 
-         plugins: {
-            loadMore: {
-               element: "#js-loadMore-lightbox-gallery",
-               action: "click",
-               loadItems: 5,
-            }
-         }
+   //       plugins: {
+   //          loadMore: {
+   //             element: "#js-loadMore-lightbox-gallery",
+   //             action: "click",
+   //             loadItems: 5,
+   //          }
+   //       }
 
-      })
-      .on('initComplete.cbp', function () {
-         // your functionality
-         var $this = $(this);
-         if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
-            $("#js-loadMore-lightbox-gallery").addClass("active");
-         } else {
-            $("#js-loadMore-lightbox-gallery").removeClass("active");
-         }
-         $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-            $(this).removeClass("even");
+   //    })
+   //    .on('initComplete.cbp', function () {
+   //       // your functionality
+   //       var $this = $(this);
+   //       if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
+   //          $("#js-loadMore-lightbox-gallery").addClass("active");
+   //       } else {
+   //          $("#js-loadMore-lightbox-gallery").removeClass("active");
+   //       }
+   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
+   //          $(this).removeClass("even");
 
-            console.log();
-            var val = index + 1;
-            if ($(this).css('left') !== "0px") {
-               $(this).addClass("even");
+   //          console.log();
+   //          var val = index + 1;
+   //          if ($(this).css('left') !== "0px") {
+   //             $(this).addClass("even");
 
-            }
-         });
-      })
-      .on('onAfterLoadMore.cbp', function () {
-         // your functionality
-         var $this = $(this);
-         $("#js-loadMore-lightbox-gallery a").addClass("d-none");
-         $("#js-loadMore-lightbox-gallery").addClass("active-outer");
-         $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-            $(this).removeClass("even");
-            console.log();
-            var val = index + 1;
-            if ($(this).css('left') !== "0px") {
-               $(this).addClass("even");
-            }
-         });
-      })
-      .on('filterComplete.cbp', function () {
-         // your functionality
-         var $this = $(this);
-         if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
-            $("#js-loadMore-lightbox-gallery").addClass("active");
-            $("#js-loadMore-lightbox-gallery").removeClass("d-none");
-         } else {
-            $("#js-loadMore-lightbox-gallery").removeClass("active");
-            $("#js-loadMore-lightbox-gallery").addClass("d-none");
-         }
-         $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-            $(this).removeClass("even");
-            var val = index + 1;
-            if ($(this).css('left') !== "0px") {
-               $(this).addClass("even");
-            }
-         });
-      });
-   
+   //          }
+   //       });
+   //    })
+   //    .on('onAfterLoadMore.cbp', function () {
+   //       // your functionality
+   //       var $this = $(this);
+   //       $("#js-loadMore-lightbox-gallery a").addClass("d-none");
+   //       $("#js-loadMore-lightbox-gallery").addClass("active-outer");
+   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
+   //          $(this).removeClass("even");
+   //          console.log();
+   //          var val = index + 1;
+   //          if ($(this).css('left') !== "0px") {
+   //             $(this).addClass("even");
+   //          }
+   //       });
+   //    })
+   //    .on('filterComplete.cbp', function () {
+   //       // your functionality
+   //       var $this = $(this);
+   //       if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
+   //          $("#js-loadMore-lightbox-gallery").addClass("active");
+   //          $("#js-loadMore-lightbox-gallery").removeClass("d-none");
+   //       } else {
+   //          $("#js-loadMore-lightbox-gallery").removeClass("active");
+   //          $("#js-loadMore-lightbox-gallery").addClass("d-none");
+   //       }
+   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
+   //          $(this).removeClass("even");
+   //          var val = index + 1;
+   //          if ($(this).css('left') !== "0px") {
+   //             $(this).addClass("even");
+   //          }
+   //       });
+   //    });
+
+
    
    /*---- Wow Initializing ----*/
     new WOW().init();
@@ -736,30 +733,30 @@ var swiper = new Swiper(".mySwiper2", {
 
 
 // Sponsors Slider
-// new Swiper(".sponsors-slider-inner", {
-//    slidesPerView: "5",
-//    spaceBetween: 0,
-//    loop: true,
-//    autoplay: {
-//       delay: 1000,
-//    },
-//    breakpoints: {
-//       1200: {
-//          slidesPerView: 4,
-//       },
-//       992: {
-//          slidesPerView: 3,
-//       },
-//       550: {
-//          slidesPerView: 2,
-//          spaceBetween: 0,
-//       },
-//       480: {
-//          slidesPerView: 1,
-//          spaceBetween: 0,
-//       }
-//    }
-// });
+new Swiper(".mySwiper3", {
+   slidesPerView: "5",
+   spaceBetween: 0,
+   loop: true,
+   autoplay: {
+      delay: 1000,
+   },
+   breakpoints: {
+      1200: {
+         slidesPerView: 5,
+      },
+      992: {
+         slidesPerView: 3,
+      },
+      550: {
+         slidesPerView: 2,
+         spaceBetween: 0,
+      },
+      480: {
+         slidesPerView: 1,
+         spaceBetween: 0,
+      }
+   }
+});
 
 // Blog Listing Image Slider
 // new Swiper(".blog-listing-image-slider", {

@@ -2069,16 +2069,25 @@ font-size: 20px !important;
 .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
 	padding: 12px 32px;
 }
-.cbp-l-loadMore-button .cbp-l-loadMore-link, 
-.cbp-l-loadMore-button .cbp-l-loadMore-button-link,
-.cbp-l-loadMore-button .cbp-l-loadMore-link:hover, 
-.cbp-l-loadMore-button .cbp-l-loadMore-button-link:hover,
-.cbp-l-loadMore-button .cbp-l-loadMore-link:focus, 
-.cbp-l-loadMore-button .cbp-l-loadMore-button-link:focus{
+.loadMoreBtn{
+    border-radius: 50px;
+}
+.cbp-l-loadMore-bgbutton .cbp-l-loadMore-link {
+     min-width: 80px!important;
+     padding: 3px 26px!important;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 15px;
+}
+.cbp-l-loadMore-button .cbp-l-loadMore-link,  .cbp-l-loadMore-bgbutton .cbp-l-loadMore-link,
+.cbp-l-loadMore-button .cbp-l-loadMore-button-link, .cbp-l-loadMore-bgbutton .cbp-l-loadMore-button-link,
+.cbp-l-loadMore-button .cbp-l-loadMore-link:hover, .cbp-l-loadMore-bgbutton .cbp-l-loadMore-link:hover,
+.cbp-l-loadMore-button .cbp-l-loadMore-button-link:hover, .cbp-l-loadMore-bgbutton .cbp-l-loadMore-button-link:hover,
+.cbp-l-loadMore-button .cbp-l-loadMore-link:focus, .cbp-l-loadMore-bgbutton .cbp-l-loadMore-link:focus,
+.cbp-l-loadMore-button .cbp-l-loadMore-button-link:focus, .cbp-l-loadMore-bgbutton .cbp-l-loadMore-button-link:focus{
 	color: #fff;
 }
 
-.cbp-l-filters-button .cbp-filter-item {
+.cbp-l-filters-button .cbp-filter-item  {
 	background: transparent;
 	padding: 0px;
 	margin: 0;
@@ -2088,7 +2097,7 @@ font-size: 20px !important;
 	color: #333333;
    font-family: 'Open Sans', sans-serif;
 }
-.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
+.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active  {
     color: #ff1637;
    background: transparent;
 }
@@ -2099,7 +2108,7 @@ font-size: 20px !important;
     font-size: 14px;
 }
 .cbp-l-filters-button .cbp-filter-item,
-.cbp-item.even{
+.cbp-item.even  {
    -webkit-transition: 300ms all ease;
 	-o-transition: 300ms all ease;
 	transition: 300ms all ease;
@@ -2107,7 +2116,7 @@ font-size: 20px !important;
 .cbp-item.even {
 	margin-top: -190px;
 }
-.cbp-l-grid-mosaic .cbp-caption-activeWrap {
+.cbp-l-grid-mosaic .cbp-caption-activeWrap , .cbp-l-grid-mosaic-flat .cbp-caption-activeWrap{
     background: rgba(17, 176, 204, .8);
 }
 
@@ -2140,15 +2149,15 @@ font-size: 20px !important;
 .portfolio-hover-effect:hover i {
     left: 50%;
 }
-#js-loadMore-lightbox-gallery {
+#js-loadMore-lightbox-gallery, .js-loadMore-mosaic-flat-gallery {
     margin-top: 45px;
 }
-#js-loadMore-lightbox-gallery.active {
+#js-loadMore-lightbox-gallery.active ,.js-loadMore-mosaic-flat-gallery.active   {
     margin-top: -180px;
     position: relative;
     z-index: 1;
 }
-#js-loadMore-lightbox-gallery.active-outer {
+#js-loadMore-lightbox-gallery.active-outer,.js-loadMore-mosaic-flat-gallery.active-outer {
     margin-top: -250px;
 }
 
@@ -2618,7 +2627,7 @@ font-size: 20px !important;
     
 }
 @media only screen and (max-width: 1199px) {
-   #js-loadMore-lightbox-gallery.active {
+   #js-loadMore-lightbox-gallery.active, .js-loadMore-mosaic-flat-gallery.active {
       margin-top: 0;
    }
 }
@@ -2773,7 +2782,7 @@ font-size: 20px !important;
     }
    
     /*NavBar*/
-   /*.navbar {
+   .navbar {
         padding-top: 20px;
     }
     .navbar-full-white-bg {
@@ -2802,7 +2811,7 @@ font-size: 20px !important;
     }
    .nav-menu-button {
         right: 85px !important;
-    }*/
+    }
    
    /*Slider*/
    .main-slider-detail-text {
@@ -2886,7 +2895,7 @@ font-size: 20px !important;
    .cbp-item.even {
         margin-top: 0;
     }
-   #js-loadMore-lightbox-gallery.active {
+   #js-loadMore-lightbox-gallery.active , .js-loadMore-mosaic-flat-gallery.active {
         margin-top: 15px;
     }
    
@@ -3012,6 +3021,10 @@ font-size: 20px !important;
     .blog-widgets-outer {
         margin-top: 30px;
     }
+    /* LOADMORE BUTTON PORTFOLIO */
+    .cbp-l-loadMore-bgbutton .cbp-l-loadMore-link{
+        margin-top: 70px;
+    }
 
 }
 
@@ -3088,6 +3101,11 @@ font-size: 20px !important;
 @media only screen and (max-width: 540px) {
     .team-member-slider-2 .mySwiper2 .swiper-slide {
         width: 346px!important;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .team-member-slider-2 .mySwiper2 .swiper-slide {
+        width: 400px!important;
     }
 }
 /* ============================================  Main Banner Slider   ========================================================== */
