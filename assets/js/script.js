@@ -3,10 +3,7 @@
 //    $(".preloader").fadeOut("slow");
 // });
 
-
-
 jQuery(function ($) {
-
 
    // Navbar Scroll Function
    var $window = $(window);
@@ -73,7 +70,50 @@ jQuery(function ($) {
       return false;
    });
    
-   
+   // ----- Main Banner Slider ----- //
+   $(function () {
+      var imagesCompareElement = $('.js-img-compare').imagesCompare();
+      var imagesCompare = imagesCompareElement.data('imagesCompare');
+      var events = imagesCompare.events();
+
+      imagesCompare.on(events.changed, function (event) {                                                                  
+          console.log(events.changed);
+          console.log(event.ratio);
+          if (event.ratio < 0.4) {
+              console.log('We see more than half of the back image');
+          }
+          if (event.ratio > 0.6) {
+              console.log('We see more than half of the front image');
+          }
+
+          if (event.ratio <= 0) {
+              console.log('We see completely back image');
+          }
+
+          if (event.ratio >= 1) {
+              console.log('We see completely front image');
+          }
+      });
+
+      $('.js-front-btn').on('click', function (event) {
+          event.preventDefault();
+          imagesCompare.setValue(1, true);
+      });
+
+      $('.js-back-btn').on('click', function (event) {
+          event.preventDefault();
+          imagesCompare.setValue(0, true);
+      });
+
+      $('.js-toggle-btn').on('click', function (event) {
+          event.preventDefault();
+          if (imagesCompare.getValue() >= 0 && imagesCompare.getValue() < 1) {
+              imagesCompare.setValue(1, true);
+          } else {
+              imagesCompare.setValue(0, true);
+          }
+      });
+  });
    /*----- SideBar Menu On click -----*/
   var $menu_left = $(".side-nav-left");
   var $menu_right = $(".side-nav-right");
@@ -157,202 +197,7 @@ jQuery(function ($) {
 
 
 
-   // Main Slider Four Revolution
-   // if ($("body").hasClass("index-one")) {
-   //    jQuery("#main-slider-four").show().revolution({
-   //       sliderType: "standard",
-   //       jsFileLocation: "//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
-   //       sliderLayout: "fullscreen",
-   //       dottedOverlay: "none",
-   //       delay: 9000,
-   //       navigation: {
-   //          keyboardNavigation: "off",
-   //          keyboard_direction: "horizontal",
-   //          mouseScrollNavigation: "off",
-   //          mouseScrollReverse: "default",
-   //          onHoverStop: "off",
-   //          arrows: {
-   //             style: "hesperiden",
-   //             enable: true,
-   //             hide_onmobile: false,
-   //             hide_onleave: false,
-   //             tmp: '',
-   //             left: {
-   //                h_align: "center",
-   //                v_align: "bottom",
-   //                h_offset: -20,
-   //                v_offset: 8
-   //             },
-   //             right: {
-   //                h_align: "center",
-   //                v_align: "bottom",
-   //                h_offset: 20,
-   //                v_offset: 8
-   //             }
-   //          }
-   //       },
-   //       responsiveLevels: [1240, 1240, 1240, 480],
-   //       visibilityLevels: [1240, 1240, 1240, 480],
-   //       gridwidth: [1200, 1200, 1200, 480],
-   //       gridheight: [800, 800, 800, 700],
-   //       lazyType: "none",
-   //       parallax: {
-   //          type: "mouse+scroll",
-   //          origo: "slidercenter",
-   //          speed: 400,
-   //          speedbg: 0,
-   //          speedls: 0,
-   //          levels: [1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 47, 48, 49, 50, 51, 55]
-   //       },
-   //       shadow: 0,
-   //       spinner: "off",
-   //       stopLoop: "on",
-   //       stopAfterLoops: 0,
-   //       stopAtSlide: 1,
-   //       shuffle: "off",
-   //       autoHeight: "off",
-   //       fullScreenAutoWidth: "off",
-   //       fullScreenAlignForce: "off",
-   //       fullScreenOffsetContainer: "",
-   //       fullScreenOffset: "",
-   //       disableProgressBar: "on",
-   //       hideThumbsOnMobile: "off",
-   //       hideSliderAtLimit: 0,
-   //       hideCaptionAtLimit: 0,
-   //       hideAllCaptionAtLilmit: 0,
-   //       debugMode: false,
-   //       fallbacks: {
-   //          simplifyAll: "off",
-   //          nextSlideOnWindowFocus: "off",
-   //          disableFocusListener: false
-   //       }
-   //    });
-   //    var ua = window.navigator.userAgent;
-   //    var msie = ua.indexOf("MSIE ");
-   //    if (
-   //       msie > 0 ||
-   //       !!navigator.userAgent.match(/Trident.*rv\:11\./) ||
-   //       ("CSS" in window &&
-   //          "supports" in window.CSS &&
-   //          !window.CSS.supports("mix-blend-mode", "screen"))
-   //    ) {
-   //       var bgColor = "rgba(245, 245, 245, 0.5)";
-   //       //jQuery('.rev_slider .tp-caption[data-blendmode]').removeAttr('data-blendmode').css('background', bgColor);
-   //       jQuery(
-   //          ".rev_slider .tp-caption.tp-blendvideo[data-blendmode]"
-   //       ).remove();
-   //    }
-
-   //    // BEFORE/AFTER INITIALISATION
-   //    RevSliderBeforeAfter(jQuery, jQuery("#main-slider-four"), {
-   //       arrowStyles: {
-   //          leftIcon: "fas fa-caret-left",
-   //          rightIcon: "fas fa-caret-right",
-   //          topIcon: "fas fa-caret-up",
-   //          bottomIcon: "fas fa-caret-bottom",
-   //          size: "35",
-   //          color: "#ffffff",
-   //          bgColor: "transparent",
-   //          spacing: "10",
-   //          padding: "0",
-   //          borderRadius: "0"
-   //       },
-   //       dividerStyles: {
-   //          width: "1",
-   //          color: "rgba(255, 255, 255, 0.5)"
-   //       },
-   //       onClick: {
-   //          time: "500",
-   //          easing: "Power2.easeOut"
-   //       },
-   //       cursor: "move",
-   //       carousel: false
-   //    });
-   // }
    
-   /* ------ Revolution Slider ------ */
-   // $("#banner-dotted").show().revolution({
-   //    sliderType: "standard",
-   //    sliderLayout: "fullscreen",
-   //    scrollbarDrag: "true",
-   //    dottedOverlay: "none",
-   //    delay: 3000,
-   //    navigation: {
-   //       bullets: {
-   //          style: "",
-   //          enable: true,
-   //          rtl: false,
-   //          hide_onmobile: false,
-   //          hide_onleave: false,
-   //          hide_under: 320,
-   //          hide_over: 9999,
-   //          tmp: '',
-   //          direction: "horizontal",
-   //          space: 10,
-   //          h_align: "center",
-   //          v_align: "bottom",
-   //          h_offset: 0,
-   //          v_offset: 30
-   //       },
-   //       arrows: {
-   //          enable: true,
-   //          hide_onmobile: true,
-   //          hide_onleave: true,
-   //          hide_under: 767,
-   //          left: {
-   //             h_align: "left",
-   //             v_align: "center",
-   //             h_offset: 20,
-   //             v_offset: 30,
-   //          },
-   //          right: {
-   //             h_align: "right",
-   //             v_align: "center",
-   //             h_offset: 20,
-   //             v_offset: 30
-   //          },
-   //       },
-   //       touch: {
-   //          touchenabled: "on",
-   //          swipe_threshold: 75,
-   //          swipe_min_touches: 1,
-   //          swipe_direction: "horizontal",
-   //          drag_block_vertical: false,
-   //       }
-   //    },
-   //    viewPort: {
-   //       enable: true,
-   //       outof: "pause",
-   //       visible_area: "90%"
-   //    },
-   //    responsiveLevels: [4096, 1024, 778, 480],
-   //    gridwidth: [1170, 1024, 750, 480],
-   //    gridheight: [600, 500, 500, 350],
-   //    lazyType: "none",
-   //    parallax: {
-   //       type: "mouse",
-   //       origo: "slidercenter",
-   //       speed: 9000,
-   //       levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
-   //    },
-   //    shadow: 0,
-   //    spinner: "off",
-   //    stopLoop: "off",
-   //    stopAfterLoops: -1,
-   //    stopAtSlide: -1,
-   //    shuffle: "off",
-   //    autoHeight: "off",
-   //    hideThumbsOnMobile: "off",
-   //    hideSliderAtLimit: 0,
-   //    hideCaptionAtLimit: 0,
-   //    hideAllCaptionAtLilmit: 0,
-   //    debugMode: false,
-   //    fallbacks: {
-   //       simplifyAll: "off",
-   //       nextSlideOnWindowFocus: "off",
-   //       disableFocusListener: false,
-   //    }
-   // });
 
    
 //Company Stats Number Counter:
@@ -384,104 +229,6 @@ $(window).scroll(testScroll);
         });
       }
     }
-
-
-
-   // // Cube Portfolio Initializing
-   // $('#js-grid-mosaic-flat').cubeportfolio({
-   //       filters: '#js-filters-mosaic',
-   //       layoutMode: 'grid',
-   //       sortByDimension: true,
-   //       mediaQueries: [{
-   //          width: 1500,
-   //          cols: 2,
-   //      }, {
-   //          width: 1100,
-   //          cols: 2,
-   //      }, {
-   //          width: 768,
-   //          cols: 1,
-   //      }, {
-   //          width: 480,
-   //          cols: 1,
-   //          options: {
-   //             gapHorizontal: 60
-   //          }
-   //      }],
-   //       defaultFilter: '*',
-   //       animationType: 'fadeOut',
-   //       gapHorizontal: 120,
-   //       gapVertical: 150,
-   //       gridAdjustment: 'responsive',
-   //       caption: 'zoom',
-
-   //       // lightbox
-   //       lightboxDelegate: '.cbp-lightbox',
-   //       lightboxGallery: true,
-   //       lightboxTitleSrc: 'data-title',
-   //       lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
-
-   //       plugins: {
-   //          loadMore: {
-   //             element: "#js-loadMore-lightbox-gallery",
-   //             action: "click",
-   //             loadItems: 5,
-   //          }
-   //       }
-
-   //    })
-   //    .on('initComplete.cbp', function () {
-   //       // your functionality
-   //       var $this = $(this);
-   //       if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
-   //          $("#js-loadMore-lightbox-gallery").addClass("active");
-   //       } else {
-   //          $("#js-loadMore-lightbox-gallery").removeClass("active");
-   //       }
-   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-   //          $(this).removeClass("even");
-
-   //          console.log();
-   //          var val = index + 1;
-   //          if ($(this).css('left') !== "0px") {
-   //             $(this).addClass("even");
-
-   //          }
-   //       });
-   //    })
-   //    .on('onAfterLoadMore.cbp', function () {
-   //       // your functionality
-   //       var $this = $(this);
-   //       $("#js-loadMore-lightbox-gallery a").addClass("d-none");
-   //       $("#js-loadMore-lightbox-gallery").addClass("active-outer");
-   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-   //          $(this).removeClass("even");
-   //          console.log();
-   //          var val = index + 1;
-   //          if ($(this).css('left') !== "0px") {
-   //             $(this).addClass("even");
-   //          }
-   //       });
-   //    })
-   //    .on('filterComplete.cbp', function () {
-   //       // your functionality
-   //       var $this = $(this);
-   //       if ($(".cbp-filter-item-active").attr("data-filter") === "*") {
-   //          $("#js-loadMore-lightbox-gallery").addClass("active");
-   //          $("#js-loadMore-lightbox-gallery").removeClass("d-none");
-   //       } else {
-   //          $("#js-loadMore-lightbox-gallery").removeClass("active");
-   //          $("#js-loadMore-lightbox-gallery").addClass("d-none");
-   //       }
-   //       $this.find(".cbp-wrapper").find(".cbp-item:not(.cbp-item-off)").each(function (index) {
-   //          $(this).removeClass("even");
-   //          var val = index + 1;
-   //          if ($(this).css('left') !== "0px") {
-   //             $(this).addClass("even");
-   //          }
-   //       });
-   //    });
-
 
    
    /*---- Wow Initializing ----*/
@@ -554,6 +301,8 @@ var swiper = new Swiper(".mySwiper1", {
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
+  simulateTouch:false,
+
   // autoplay: true,
   autoplaySpeed: 1000,
   // pagination: {
@@ -651,87 +400,6 @@ var swiper = new Swiper(".mySwiper2", {
    },
  });
 
-
- // Team Slider Single image on left side
-//  if ($(".team-section").hasClass("team-section-two")) {
-//    new Swiper(".team-member-slider-2", {
-//       loop: true,
-//       navigation: {  
-//          nextEl: '.swiper-button-next',
-//          prevEl: '.swiper-button-prev',
-//       },
-//    });
-// }
-
-// Team Member Sliders Includes 2 Slider One For Team Photo And Other For Team Detail
-// if ($(".team-section").hasClass("team-section-one")) {
-//    // 1. Slider Team Photo rotating
-//    var teammemberslider = new Swiper(".team-member-slider", {
-//       slidesPerView: 3,
-//       allowTouchMove: false,
-//       centeredSlides: true,
-//       loop: true,
-//       slideToClickedSlide: true,
-//       effect: 'coverflow',
-//       coverflow: {
-//          rotate: 0,
-//          stretch: 100,
-//          depth: 200,
-//          modifier: 1,
-//          slideShadows: false
-//       },
-//       breakpoints: {
-//          // when window width is <= 768px
-//          768: {
-//             slidesPerView: 1,
-//             centeredSlides: false,
-//             effect: "slide",
-//             allowTouchMove: true,
-//          }
-//       }
-//    });
-
-//    // 2. Slider Team Detail
-//    var teammemberanimation = $('.team-member-progress-detail').first();
-//    teammemberanimation.show();
-//    teammemberanimation.addClass('animated ' + teammemberanimation.data('animate'));
-//    var teammembersliderdetail = new Swiper(".team-member-detail-slider", {
-//       on: {
-//          slideChangeTransitionStart: function () {
-//             var $this = $(this);
-//             var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
-//             maping.map(function (k, v) {
-//                var target = $(v);
-//                target.hide();
-//                target.removeClass('animated ' + target.data('animate'));
-//             });
-//          },
-//          slideChangeTransitionEnd: function () {
-//             var $this = $(this);
-//             var maping = $($this[0].slides[$this[0].activeIndex]).find('[data-slide="animated"]');
-//             maping.map(function (k, v) {
-//                var target = $(v);
-//                target.show();
-//                target.addClass('animated ' + target.data('animate'));
-//             });
-//          }
-//       },
-//       allowTouchMove: false,
-//       loop: true,
-//       loopSlides: 3,
-//       slidesPerView: "auto",
-//       slideToClickedSlide: true,
-//       breakpoints: {
-//          768: {
-//             slidesPerView: 1,
-//          }
-//       }
-//    });
-//    teammemberslider.controller.control = teammembersliderdetail;
-//    teammembersliderdetail.controller.control = teammemberslider;
-// }
-
-
 // Sponsors Slider
 new Swiper(".mySwiper3", {
    slidesPerView: "5",
@@ -739,6 +407,7 @@ new Swiper(".mySwiper3", {
    loop: true,
    autoplay: {
       delay: 1000,
+      
    },
    breakpoints: {
       1200: {
@@ -771,4 +440,4 @@ new Swiper(".mySwiper3", {
 //    },
 // });
 
-
+//Map

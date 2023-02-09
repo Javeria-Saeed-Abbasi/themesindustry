@@ -1,0 +1,322 @@
+/* Images compare main container */
+.images-compare-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+/* .main-slide1 .images-compare-container .div1{
+      background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%)!important;
+} */
+/* Images compare front element */
+.images-compare-before {
+    will-change: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Images compare back element */
+.images-compare-after {
+    pointer-events: none;
+}
+
+/* Responsive image settings */
+.images-compare-before img, .images-compare-after img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Separator (thin vertical blank line) */
+.images-compare-separator {
+    position: absolute;
+    background: white;
+    height: 100%;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 2px;
+    cursor: all-scroll;
+}
+
+/* Drag handle (circle) */
+.images-compare-handle {
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    left: 675px!important;
+    top: 43%;
+    margin-left: -22px;
+    margin-top: -22px;
+    /* border: 3px solid white; */
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+    -webkit-box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);
+    -moz-box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);
+    box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);
+    z-index: 3;
+    /* background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7); */
+    cursor: pointer;
+}
+
+/* Drag handle arrows */
+.images-compare-left-arrow, .images-compare-right-arrow {
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.images-compare-left-arrow {
+    border-right: 6px solid white;
+    left: 50%;
+    margin-left: -17px;
+}
+
+.images-compare-right-arrow {
+    border-left: 6px solid white;
+    right: 50%;
+    margin-right: -17px;
+}
+
+/* Label */
+.images-compare-label .head1{
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+}
+
+.images-compare-container .images-compare-label .head1{
+    display: inherit;
+}
+
+.images-compare-before .images-compare-label .head1{
+    left: 30%;
+    right: auto;
+    top: 30%;
+    white-space: nowrap;
+    font-size: 27px;
+    line-height: 53px;
+    font-weight: 700;
+    color:#ffffff !important;
+    text-align: center;
+    filter: blur(0px);
+    opacity: 1;
+    text-transform: capitalize;
+    -webkit-font-smoothing: antialiased!important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.images-compare-after .images-compare-label .head1{
+    left: auto;
+    right: 30.7%;
+    top: 30%;
+    white-space: nowrap;
+    font-size: 27px;
+    line-height: 53px;
+    font-weight: 700;
+    color:#333333 !important;
+    text-align: center;
+    filter: blur(0px);
+    opacity: 1;
+    text-transform: capitalize;
+    -webkit-font-smoothing: antialiased!important;
+    font-family: 'Montserrat', sans-serif;
+  
+}
+
+/* Caption */
+.images-compare-label .slider-cap{
+    /* background-color: aqua; */
+        position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.images-compare-container .images-compare-label .slider-cap{
+    display: inherit;
+}
+
+.images-compare-before .images-compare-label .slider-cap{
+    left: 35.47%;
+    right: auto;
+    top: 45%;
+    white-space: nowrap;
+    line-height: 30px !important;
+    color:#ffffff !important;
+    text-align: center;
+    filter: blur(0px);
+    opacity: 1;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+.images-compare-after .images-compare-label .slider-cap{
+    left: auto;
+    right: 35.4%;
+    top: 45%;
+    white-space: nowrap;
+    line-height: 30px !important;
+    color:#333333 !important;
+    text-align: center;
+    filter: blur(0px);
+    opacity: 1;
+
+}
+/* Banner Button */
+.images-compare-label .learn-more-btn{
+    /* background-color: aqua; */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+    font-size: 15 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.images-compare-container .images-compare-label .learn-more-btn{
+    display: inherit;
+}
+
+.images-compare-before .images-compare-label .learn-more-btn{
+    left: 44%;
+    right: auto;
+    top: 55%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.images-compare-after .images-compare-label .learn-more-btn{
+    left: auto;
+    right: 43.4%;
+    top: 55%;
+    color:#ffffff !important;
+    text-align: center;
+    white-space: nowrap;
+}
+/* ============================== Third Slide =============================== */
+/* Heading */
+.main-slide3 .images-compare-before .images-compare-label .head1{
+    left: 24%;
+    right: auto;
+    top: 30%;
+    color:#ffffff !important;
+}
+
+.main-slide3 .images-compare-after .images-compare-label .head1{
+    left: auto;
+    right: 25.7%;
+    top: 30%;
+    color:#ffffff !important;
+}
+/* Caption */
+
+.main-slide3 .images-compare-before .images-compare-label .slider-cap{
+    left: 35.47%;
+    right: auto;
+    top: 45%;
+    color:#ffffff !important;
+}
+
+.main-slide3 .images-compare-after .images-compare-label .slider-cap{
+    left: auto;
+    right: 35.4%;
+    top: 45%;
+    color:#ffffff !important;
+
+}
+
+
+/* Banner Button */
+.main-slide3 .images-compare-label .learn-more-btn1,
+.main-slide3 .images-compare-label .learn-more-btn2{
+    /* background-color: aqua; */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+    font-size: 15 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.main-slide3 .images-compare-container .images-compare-label .learn-more-btn1,
+.main-slide3 .images-compare-container .images-compare-label .learn-more-btn2
+    {
+    display: inherit;
+}
+.main-slide3 .images-compare-before .images-compare-label .learn-more-btn1{
+    left: 38%;
+    right: auto;
+    top: 53%;
+    white-space: nowrap;
+    text-align: center;
+}
+.main-slide3 .images-compare-before .images-compare-label .learn-more-btn2{
+    left: 50%;
+    right: auto;
+    top: 53%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.main-slide3 .images-compare-after .images-compare-label .learn-more-btn1{
+    left: auto;
+    right: 50%;
+    top: 53%;
+    color:#ffffff !important;
+    text-align: center;
+    white-space: nowrap;
+}
+.main-slide3 .images-compare-after .images-compare-label .learn-more-btn2{
+    left: auto;
+    right: 38%;
+    top: 53%;
+    color:#ffffff !important;
+    text-align: center;
+    white-space: nowrap;
+}
+/* Heading */
+.main-slide1 .images-compare-before .images-compare-label .head1{
+    left: 29.8%;
+    right: auto;
+    top: 30%;
+    color:#ffffff !important;
+}
+
+.main-slide1 .images-compare-after .images-compare-label .head1{
+    left: auto;
+    right:32%;
+    top: 30%;
+    color:#ffffff !important;
+}

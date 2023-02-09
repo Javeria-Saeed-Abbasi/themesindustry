@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800');
 
-/* Global Styling + Helper Classes */
+/* Elements Styling */
 
 body {
 
@@ -807,7 +807,7 @@ p {
     background: #00abc9;
 }
 
-
+/*------------- Map----------- */
 
 /*---- Header Styling Starts -----*/
 .navbar, .navbar-nav .nav-link {
@@ -2385,6 +2385,9 @@ font-size: 20px !important;
 
 .blog-picture > img {
    width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 .blog-listing-inner ,
 .blog-widgets-outer ,
@@ -2961,8 +2964,6 @@ font-size: 20px !important;
 
 }
 
-
-
 /* Smaller Devices Having Width < 768px */
 @media only screen and (max-width: 768px) {
    
@@ -2970,7 +2971,9 @@ font-size: 20px !important;
    .nav-menu-button {
         right: 20px !important;
     }
-   
+    .navbar-nav-2{
+        margin-left: unset;
+    }
    /*Slider*/
    .main-slider-detail-text {
         font-size: 16px !important;
@@ -3022,12 +3025,11 @@ font-size: 20px !important;
         margin-top: 30px;
     }
     /* LOADMORE BUTTON PORTFOLIO */
-    .cbp-l-loadMore-bgbutton .cbp-l-loadMore-link{
-        margin-top: 70px;
+    .cbp-l-loadMore-bgbutton{
+        margin-top: 100px;
     }
 
 }
-
 @media only screen and (max-width: 767px) {
    .company-information-inner .paragraph-23 {
       font-size: 17px;
@@ -3068,7 +3070,6 @@ font-size: 20px !important;
    }
    
 } 
-
 /* Smaller Devices Having Width < 540px */
 @media only screen and (max-width: 540px) {
     h1 ,
@@ -3431,3 +3432,56 @@ font-size: 20px !important;
     background-position: 0 center;
     background-size: 100vw;
 }
+
+/* =================== Comparsion Slider Css ================ */
+.page-container {
+    /* max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF; */
+    /* padding: 15px; */
+    background: white;
+    
+}
+
+.page-container h2 {
+    margin-bottom: 15px;
+}
+
+.page-container button.btn {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background: none;
+    color: cornflowerblue;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding: 10px;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.page-container button.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+.mySwiper1 .swiper-button-prev:after, .mySwiper1 .swiper-button-next:after{
+    color: white!important;
+}
+.mySwiper1 .swiper-button-prev {
+    left: 47%;
+    top: 60% !important;
+}
+.mySwiper1 .swiper-button-next {
+    right: 47%;
+    top: 60% !important;
+}
+
