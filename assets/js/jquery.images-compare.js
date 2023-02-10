@@ -206,8 +206,8 @@
         function buildDragHandle() {
             element.prepend("<div class='images-compare-handle'></div>");
             dragHandle = element.find(".images-compare-handle");
-            dragHandle.append("<span class='images-compare-left-arrow'></span>");
-            dragHandle.append("<span class='images-compare-right-arrow'></span>");
+            dragHandle.append("<span class='images-compare-left-arrow'><i class='fa-solid fa-caret-left'></i></span>");
+            dragHandle.append("<span class='images-compare-right-arrow'><i class='fa-solid fa-caret-right'></i></span>");
         }
 
         function patchSize() {

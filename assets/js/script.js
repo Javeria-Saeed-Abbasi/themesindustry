@@ -441,3 +441,7 @@ new Swiper(".mySwiper3", {
 // });
 
 //Map
+
+//arrows animation
+
+

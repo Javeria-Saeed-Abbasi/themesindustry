@@ -807,6 +807,282 @@ p {
     background: #00abc9;
 }
 
+  /* ============== SLIDER 1 BANNER COMPARISION SLIDER ================ */
+  .comp-image-slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .slider1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+    /* background: url('../../assets/images/');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center; */
+}
+.plant{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: 77px;
+    left: 4%;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 3px;
+    visibility: inherit;
+} 
+.glasses>img, .keyboard>img, .colors>img , .coffee>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }  
+
+.comp-image-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.glasses{
+    width: 195.312px;
+    height: 195.312px;
+    position: relative;
+    top: 108px;
+    left: 23%;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 6px;
+    rotate: 45deg;
+    visibility: inherit;
+}    
+.keyboard{
+    width: 468.75px;
+    height: 468.75px;
+    position: relative;
+    top: -48px;
+    left: 32.5%;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 9px;
+}
+.colors{
+    width: 468.75px;
+    height: 468.75px;
+    position: relative;
+    top: -48px;
+    left: 46.5%;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+.slider1 input{
+    -webkit-appearance: none;
+    width: 100%;
+    background: none;
+    z-index: 10;
+    margin-right: -50px;
+}
+
+.slider1 input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 100vh;
+    background-color: #ffffff;
+    cursor:all-scroll;
+}
+.objects2 .mac2{
+    width: 468.75px;
+    height: 468.75px;
+    left: 32%;
+    top: -48px;
+    position: absolute;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 10px;
+}
+.objects2 .coffee{
+    width: 292.969px;
+    height: 292.969px;
+    position: absolute;
+    text-align: inherit;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 10px;
+}
+.original-image1{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+    /* background:url('../../assets/images/main-slider-image-7.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 100vw; */
+}
+
+
+  .slider2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url('../../assets/images/main-slider-image-6.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+}
+.slider3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url('../../assets/images/main-slider-image-9.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+}
+.slider2 input, .slider3 input{
+    -webkit-appearance: none;
+    width: 100%;
+    background: none;
+    z-index: 10;
+    margin-right: -50px;
+}
+
+.slider2 input::-webkit-slider-thumb, .slider3 input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 100vh;
+    background-color: #ffffff;
+    cursor:all-scroll;
+}
+
+.original-image2{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background:url('../../assets/images/main-slider-image-7.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 100vw;
+}
+.original-image3{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background:url('../../assets/images/main-slider-image-8.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 100vw;
+}
+
+/* =================== Comparsion Slider Css ================ */
+.page-container {
+    /* max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF; */
+    /* padding: 15px; */
+    background: white;
+    
+}
+
+.page-container h2 {
+    margin-bottom: 15px;
+}
+
+.page-container button.btn {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background: none;
+    color: cornflowerblue;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding: 10px;
+    border: 1px solid cornflowerblue;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.page-container button.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+.mySwiper1 .swiper-button-prev:after, .mySwiper1 .swiper-button-next:after{
+    color: white!important;
+    font-size: 2rem;
+}
+.mySwiper1 .swiper-button-prev {
+    left: 47%;
+    top: 65% !important;
+}
+.mySwiper1 .swiper-button-next {
+    right: 47%;
+    top: 65% !important;
+}
+.learn-more-btn1.lm-1
+.button-setting , .learn-more-btn2.lm-2
+.button-setting{
+    padding: 10px 19px !important;
+    font-size: 11px!important;
+}
+.learn-more-btn .button-setting{
+    font-size: 11px!important;
+}
 /*------------- Map----------- */
 
 /*---- Header Styling Starts -----*/
@@ -2966,7 +3242,10 @@ font-size: 20px !important;
 
 /* Smaller Devices Having Width < 768px */
 @media only screen and (max-width: 768px) {
-   
+    .plant {
+        width: 200px;
+        height: 200px;
+    }
    /*NavBar*/
    .nav-menu-button {
         right: 20px !important;
@@ -3108,6 +3387,10 @@ font-size: 20px !important;
     .team-member-slider-2 .mySwiper2 .swiper-slide {
         width: 400px!important;
     }
+    .plant {
+        width: 51px;
+        height: 95px;   
+    }
 }
 /* ============================================  Main Banner Slider   ========================================================== */
 /* * {
@@ -3232,256 +3515,4 @@ font-size: 20px !important;
       --image-comparison-slider-width: 90vw;
     }
   }
-
-
-  /* ============== SLIDER 1 BANNER COMPARISION SLIDER ================ */
-  .comp-image-slider{
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .slider1{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%);
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    visibility: inherit;
-    /* background: url('../../assets/images/');
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: center; */
-}
-.plant{
-    width: 300px;
-    height: 200px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 3px;
-
-    visibility: inherit;
-}   
-.comp-image-slider img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.glasses{
-    width: 195.312px;
-    height: 195.312px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 6px;
-    rotate: 45deg;
-    visibility: inherit;
-}    
-.keyboard{
-    width: 468.75px;
-    height: 468.75px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 9px;
-}
-.colors{
-    width: 468.75px;
-    height: 468.75px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 9px;
-}
-
-.slider1 input{
-    -webkit-appearance: none;
-    width: 100%;
-    background: none;
-    z-index: 10;
-    margin-right: -50px;
-}
-
-.slider1 input::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 1px;
-    height: 100vh;
-    background-color: #ffffff;
-    cursor:all-scroll;
-}
-.objects2 .mac2{
-    width: 468.75px;
-    height: 468.75px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 10px;
-}
-.objects2 .coffee{
-    width: 292.969px;
-    height: 292.969px;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    line-height: 0px;
-    border-width: 0px;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: 0px;
-    font-weight: 400;
-    font-size: 10px;
-}
-.original-image1{
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%);
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    visibility: inherit;
-    /* background:url('../../assets/images/main-slider-image-7.jpg');
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    background-size: 100vw; */
-}
-
-
-  .slider2{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background: url('../../assets/images/main-slider-image-6.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: center;
-}
-.slider3{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background: url('../../assets/images/main-slider-image-9.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: center;
-}
-.slider2 input, .slider3 input{
-    -webkit-appearance: none;
-    width: 100%;
-    background: none;
-    z-index: 10;
-    margin-right: -50px;
-}
-
-.slider2 input::-webkit-slider-thumb, .slider3 input::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 1px;
-    height: 100vh;
-    background-color: #ffffff;
-    cursor:all-scroll;
-}
-
-.original-image2{
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background:url('../../assets/images/main-slider-image-7.jpg');
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    background-size: 100vw;
-}
-.original-image3{
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background:url('../../assets/images/main-slider-image-8.jpg');
-    background-repeat: no-repeat;
-    background-position: 0 center;
-    background-size: 100vw;
-}
-
-/* =================== Comparsion Slider Css ================ */
-.page-container {
-    /* max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border-left: 1px solid #EFEFEF;
-    border-right: 1px solid #EFEFEF; */
-    /* padding: 15px; */
-    background: white;
-    
-}
-
-.page-container h2 {
-    margin-bottom: 15px;
-}
-
-.page-container button.btn {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    background: none;
-    color: cornflowerblue;
-    /* cursor: default; */
-    font: inherit;
-    line-height: normal;
-    overflow: visible;
-    -webkit-appearance: button; /* for input */
-    -webkit-user-select: none; /* for button */
-    -moz-user-select: none;
-    -ms-user-select: none;
-    padding: 10px;
-    border: 1px solid cornflowerblue;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.page-container button.btn::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-.mySwiper1 .swiper-button-prev:after, .mySwiper1 .swiper-button-next:after{
-    color: white!important;
-}
-.mySwiper1 .swiper-button-prev {
-    left: 47%;
-    top: 60% !important;
-}
-.mySwiper1 .swiper-button-next {
-    right: 47%;
-    top: 60% !important;
-}
 
