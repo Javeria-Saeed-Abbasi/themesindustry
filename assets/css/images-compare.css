@@ -591,6 +591,10 @@ font-size: 30px;
 
     top: 46%;
 }
+.images-compare-before .images-compare-label .head1 {
+    left: 30%;
+    top: 25%;
+}
 }
 @media only screen and (min-width: 2560px) {
     .images-compare-container{
@@ -602,12 +606,23 @@ font-size: 30px;
 .images-compare-handle {
     left: 812px;
 }
+.images-compare-before .images-compare-label .learn-more-btn {
+    top: 45.32%;
+}
 }
 /* Smaller Devices Having Width < 768px */
 @media only screen and (max-width: 768px) {
     .images-compare-before .images-compare-label .head1.main-slider-text,
     .images-compare-after .images-compare-label .head1.main-slider-text {
         font-size: 33px !important;
+    }
+    .main-slide3 .images-compare-before .images-compare-label .head1 {
+        left: 25.5%;
+        top: 29.3%;
+    }
+    .main-slide3 .images-compare-after .images-compare-label .slider-cap {
+        right: 30.4%;
+        top: 39%;
     }
     .images-compare-label .slider-cap {
         font-size: 15px !important;
