@@ -2,6 +2,66 @@
 // $(window).on('load', function () {
 //    $(".preloader").fadeOut("slow");
 // });
+function changeToBlueColor(){
+  let blue = document.getElementsByClassName("learn-more-btn").style.background = "blue";
+   console.log(blue);
+ }
+ function changeToBlackColor(){
+ let  black = document.getElementsByClassName("learn-more-btn").style.background = "black";
+   console.log(black);
+ }
+$(window).on('load' ,function () {
+   $('.plant').addClass('rotate-plant'); 
+   $('.glasses').addClass('rotate-glass');  
+})
+const background = document.querySelector('.images-compare-label'),
+      plant = document.querySelector('.plant'),
+      glasses = document.querySelector('.glasses'),
+      keyboard = document.querySelector('.keyboard'),
+      mac2 = document.querySelector('.mac2'),
+      coffee = document.querySelector('.coffee'),
+      btn1 = document.querySelector('.learn-more-btn'),
+      btn2= document.querySelector('.learn-more-btn2'),
+      heading = document.querySelector('.main-slider-text'),
+      caption = document.querySelector('.slider-cap'),
+
+      root = document.documentElement;
+
+root.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  console.log(e + ' e');
+  console.log(x  + ' x');
+      //   y = e.clientY;
+  background.style.transform = `translateX(${-x / 35}px)`;
+  plant.style.transform = `translateX(${-x / 30}px)`;
+  glasses.style.transform = `translateX(${x / 30}px)`;
+  keyboard.style.transform = `translateX(${x / 30}px)`;
+  mac2.style.transform = `translateX(${x / 30}px)`;
+  btn1.style.transform = `translateX(${x / 30}px)`;
+  btn2.style.transform = `translateX(${x / 30}px)`;
+  coffee.style.transform = `translateX(${x / 30}px)`;
+  heading.style.transform = `translateX(${x / 30}px)`;
+  caption.style.transform = `translateX(${x / 30}px)`;
+});
+
+$(document).ready(function(){
+   $('.js-img-compare').click(function(e){
+       var offset = $(this).offset();
+       $('.images-compare-handle').css({
+           'top': e.pageY-offset.top,
+           'left': e.pageX-offset.left,
+           'transition': '0.5s'
+       })
+       $('.images-compare-separator').css({
+         // 'top': e.pageY-offset.top,
+         'left': e.pageX-offset.left
+     })
+   })
+});
+//Butter
+butter.init({
+   wrapperId: "butter",
+ });
 
 jQuery(function ($) {
 
@@ -241,68 +301,14 @@ $(window).scroll(testScroll);
      new WOW().init();
  });
 
-// ==================== Main Banner Slider Vanilla Tilt  ====================//
-// VanillaTilt.init(document.querySelector("#image-comparison-slider"), { 
-//    // Tilt Effect - vanilla-tilt.js (https://micku7zu.github.io/vanilla-tilt.js/) is required for this
-//    max: 2, // max tilt rotation (degrees (deg))
-//    speed: 800, // speed (transition-duration) of the enter/exit transition (milliseconds (ms))
-//    scale: 1.02 // transform scale - 2 = 200%, 1.5 = 150%, etc..
-
-//  });
- 
-//  const slider = document.querySelector("#image-comparison-slider");
-//  const sliderImgWrapper = document.querySelector("#image-comparison-slider .img-wrapper");
-//  const sliderHandle = document.querySelector("#image-comparison-slider .handle");
- 
-//  slider.addEventListener("mousemove", sliderMouseMove);
-//  slider.addEventListener("touchmove", sliderMouseMove);
- 
-//  function sliderMouseMove(event) {
- 
-//    if(isSliderLocked) return;
- 
-//    const sliderLeftX = slider.offsetLeft;
-//    const sliderWidth = slider.clientWidth;
-//    const sliderHandleWidth = sliderHandle.clientWidth;
- 
-//    let mouseX = (event.clientX || event.touches[0].clientX) - sliderLeftX;
-//    if(mouseX < 0) mouseX = 0;
-//    else if(mouseX > sliderWidth) mouseX = sliderWidth;
- 
-//    sliderImgWrapper.style.width = `${((1 - mouseX/sliderWidth) * 100).toFixed(4)}%`;
-//    sliderHandle.style.left = `calc(${((mouseX/sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth/2}px)`;
-//  }
- 
-//  let isSliderLocked = false;
- 
-//  slider.addEventListener("mousedown", sliderMouseDown);
-//  slider.addEventListener("touchstart", sliderMouseDown);
-//  slider.addEventListener("mouseup", sliderMouseUp);
-//  slider.addEventListener("touchend", sliderMouseUp);
-//  slider.addEventListener("mouseleave", sliderMouseLeave);
- 
-//  function sliderMouseDown(event) {
-//    if(isSliderLocked) isSliderLocked = false;
-//    sliderMouseMove(event);
-//  }
- 
-//  function sliderMouseUp() {
-//    if(!isSliderLocked) isSliderLocked = true;
-//  }
- 
-//  function sliderMouseLeave() {
-//    if(isSliderLocked) isSliderLocked = false;
-//  }
-
-
-
 // <!-- Initialize Main Swiper Slider-->
 var swiper = new Swiper(".mySwiper1", {
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
   simulateTouch:false,
-
+  speed: 3000,
+  effect: 'fade',
   // autoplay: true,
   autoplaySpeed: 1000,
   // pagination: {
@@ -313,7 +319,12 @@ var swiper = new Swiper(".mySwiper1", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
+  on: {
+   slideChangeTransitionStart: function () {
+      
+   },
+  
+},
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -341,7 +352,6 @@ var swiper = new Swiper(".mySwiper1", {
     },
   },
 });
-
 
 // About Slider
 new Swiper(".about-company-slider", {
@@ -440,8 +450,6 @@ new Swiper(".mySwiper3", {
 //    },
 // });
 
-//Map
 
-//arrows animation
 
 

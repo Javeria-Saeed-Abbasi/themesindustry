@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./assets/css/butter.css">
     <!-- <link rel="stylesheet" href="https://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/css/cubeportfolio.min.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/images-compare.css" />
@@ -40,16 +41,26 @@
         align-items: center;
       }
 
-      .swiper-main .swiper-slide img {
+      /* .swiper-main .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+      } */
+  
+      .images-compare-after .images-compare-label .learn-more-btn a:hover, 
+      .images-compare-after .images-compare-label .learn-more-btn a:focus {
+      color: white!important;
+      }
+      .images-compare-before .images-compare-label .learn-more-btn a:hover, 
+      .images-compare-before .images-compare-label .learn-more-btn a:focus {
+      color: white!important;
       }
     </style>
   </head>
   <body>
-    <div class="">
+    <div id="butter">
+    <div class="" >
       <!-- Page Wrapper -->
       <section class="main">
         <!-- Header Section Starts -->
@@ -84,7 +95,7 @@
                 <div class="collapse navbar-collapse d-sm-0 d-md-0">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link scroll" href="#main-slider-section"
+                      <a class="nav-link scroll active" href="#main-slider-section"
                         >home</a
                       >
                     </li>
@@ -95,7 +106,7 @@
                     </li>
                     <li class="nav-item">
                       <a
-                        class="nav-link scroll active"
+                        class="nav-link scroll"
                         href="#company-portfolio-section"
                         >our work</a
                       >
@@ -158,41 +169,41 @@
                               alt=""
                             />
                           </div>
-                          <span class="head1 fontface-one main-slider-text">
+                          <!-- <span class="head1 fontface-one main-slider-text">
                             Creative Design
                           </span>
 
                           <div class="slider-cap">
                             Treely is a Design Studio <br />
                             was founded in London, United Kingdom.
-                          </div>
-                          <div class="learn-more-btn">
+                          </div> -->
+                          <div class="learn-more-btn" onmouseover="changeToBlueColor()" onmouseout="changeToBlackColor()">
                             <a
-                              href="#."
-                              class="button-setting background-white text-color-dark button-setting-secondary"
-                            >
+                              href="#"
+                              class="button-setting background-white text-color-dark button-setting-primary"
+                            >        
                               Learn More
                             </a>
                           </div>
                         </span>
 
-                        <img src="./assets/images/bg1.png" alt="Before" />
+                        <!-- <img src="./assets/images/bg1.png" alt="Before" /> -->
                       </div>
                       <div class="div2">
                         <span class="images-compare-label">
-<!--                       
-                          <span class="keyboard">
+                      
+                          <div class="mac2">
                             <img
-                              src="./assets/images/keyboard_apple.png"
+                              src="./assets/images/keyboard_apple_2.png"
                               alt=""
                             />
-                          </span> -->
-                          <!-- <span class="coffee">
+                          </div>
+                          <div class="coffee">
                             <img
                               src="./assets/images/object_coffee_1.png"
                               alt=""
                             />
-                          </span> -->
+                          </div>
                           <span class="head1 fontface-one main-slider-text">
                             Creative Design
                           </span>
@@ -201,7 +212,7 @@
                             <br />
                             was founded in London, United Kingdom.
                           </div>
-                          <div class="learn-more-btn">
+                          <div class="learn-more-btn learn-more-btn2">
                             <a
                               href="#."
                               class="button-setting background-secondary button-setting-primary"
@@ -351,54 +362,7 @@
             </div>
           </div>
 
-          <!-- <div class="comp-image-slider">
-    <div class="slider1">
-   
-      <div class="original-image1 bg-danger">
-        <div class="container d-flex justify-content-center align-items-center objects position-absolute">
-          <div class="plant">
-            <img src="./assets/images/object_plant_1.png" alt="" srcset="">
-          </div>
-          <div class="glasses">
-            <img src="./assets/images/object_glasses_2.png" alt="" srcset="">
-          </div>
-          <div class="keyboard">
-            <img src="./assets/images/keyboard_apple.png" alt="" srcset="">
-          </div>
-          <div class="colors">
-            <img src="./assets/images/object_macmouse_1.png" alt="" srcset="">
-          </div>
-        </div>
-      </div>  
-
-      <div class="objects2">
-        <div class="container d-flex justify-content-center align-items-center objects position-absolute">
-          <div class="mac2">
-            <img src="./assets/images/keyboard_apple_2.png" alt="" srcset="">
-          </div>
-          <div class="coffee">
-            <img src="./assets/images/object_coffee_1.png" alt="" srcset="">
-          </div>
-        </div>
-      </div>
-     
-
-        <input type="range" value="50" max="100" name="" id="" />
-        <div class="handle-circle">
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-right"></i>
-      </div>
-    </div>
-    <div class="slider2">
-      <div class="original-image2"></div>  
-      
-        <input type="range" value="50" max="100" name="" id="" />
-        <div class="handle-circle">
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-right"></i>
-      </div>
-    </div>
-  </div> -->
+         
         </section>
         <!-- ============================== second sec Slider -->
         <section>
@@ -2885,28 +2849,8 @@
       </section>
       <!-- Page Wrapper Ends -->
     </div>
-
-    <!-- <script>
-      document
-        .querySelector(".slider1 input")
-        .addEventListener("input", function () {
-          document.querySelector(".original-image1").style.width =
-            this.value + "%";
-        });
-      document
-        .querySelector(".slider2 input")
-        .addEventListener("input", function () {
-          document.querySelector(".original-image2").style.width =
-            this.value + "%";
-        });
-      document
-        .querySelector(".slider3 input")
-        .addEventListener("input", function () {
-          document.querySelector(".original-image3").style.width =
-            this.value + "%";
-        });
-    </script> -->
-
+<!-- butter ends -->
+</div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -2917,7 +2861,6 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
     ></script>
-
     <script src="./assets/js/jquery.images-compare.js"></script>
     <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
@@ -2929,10 +2872,10 @@
     <script src="https://scriptpie.com/cubeportfolio/live-preview/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="./assets/js/cube-js.js"></script>
     <script src="./assets/js/jquery.fancybox.min.js"></script>
+    <script src="./assets/js/butter.js"></script>
     <!-- <script src="./assets/js/jquery-3.6.3.min.js"></script> -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
-
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

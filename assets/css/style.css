@@ -1,4 +1,6 @@
-
+html {
+    scroll-behavior: initial;
+  }
 
 /* @font-Family Inclusion links Opensans + Montserrat */
 
@@ -329,6 +331,12 @@ p {
 }
 .button-setting:hover, .button-setting:focus {
     color: #fff;
+}
+.main-slide3 .learnMoreBtns .learn-more-btn1:focus,
+.main-slide3 .learnMoreBtns .learn-more-btn1:hover
+{
+    -webkit-box-shadow: 0 0 40px 40px #ff1637 inset !important;
+    box-shadow: 0 0 40px 40px #ff1637 inset !important;
 }
 .button-setting-primary:hover, .button-setting-primary:focus {
     -webkit-box-shadow: 0 0 40px 40px #ff1637 inset !important;
@@ -832,7 +840,7 @@ p {
     width: 300px;
     height: 200px;
     position: relative;
-    top: 77px;
+    top: -44px;
     left: 4%;
     text-align: inherit;
     line-height: 0px;
@@ -860,8 +868,8 @@ p {
 .glasses{
     width: 195.312px;
     height: 195.312px;
-    position: relative;
-    top: 108px;
+    position: absolute;
+    top: 20px;
     left: 23%;
     text-align: inherit;
     line-height: 0px;
@@ -877,9 +885,9 @@ p {
 .keyboard{
     width: 468.75px;
     height: 468.75px;
-    position: relative;
-    top: -48px;
-    left: 32.5%;
+    position: absolute;
+    top: -107px;
+    left: 32%;
     text-align: inherit;
     line-height: 0px;
     border-width: 0px;
@@ -890,11 +898,11 @@ p {
     font-size: 9px;
 }
 .colors{
-    width: 468.75px;
-    height: 468.75px;
-    position: relative;
+    width:411.75px;
+    height: 377.75px;
+    position: absolute;
     top: -48px;
-    left: 46.5%;
+    left: 52%;
     text-align: inherit;
     line-height: 0px;
     border-width: 0px;
@@ -920,11 +928,11 @@ p {
     background-color: #ffffff;
     cursor:all-scroll;
 }
-.objects2 .mac2{
+.mac2{
     width: 468.75px;
     height: 468.75px;
     left: 32%;
-    top: -48px;
+    top: -25px;
     position: absolute;
     text-align: inherit;
     line-height: 0px;
@@ -935,11 +943,13 @@ p {
     font-weight: 400;
     font-size: 10px;
 }
-.objects2 .coffee{
+.coffee{
     width: 292.969px;
     height: 292.969px;
     position: absolute;
     text-align: inherit;
+    right: 150px;
+    top: 12%;
     line-height: 0px;
     border-width: 0px;
     margin: 0px;
@@ -1068,11 +1078,11 @@ p {
 }
 .mySwiper1 .swiper-button-prev {
     left: 47%;
-    top: 65% !important;
+    top: 78% !important;
 }
 .mySwiper1 .swiper-button-next {
     right: 47%;
-    top: 65% !important;
+    top: 78% !important;
 }
 .learn-more-btn1.lm-1
 .button-setting , .learn-more-btn2.lm-2
@@ -1213,8 +1223,6 @@ p {
 .navbar-logo-fade.fixed-fade .navbar-brand {
    opacity: 0;
 }
-
-
 /*menu lists*/
 .navbar-full-white-bg .nav-logo-detail-outer {
 	background: #ffffff;
@@ -1989,7 +1997,7 @@ p {
 .about-company-slider .swiper-pagination {
     /* bottom: 33px;
     left: -80px */
-    bottom: -715px;
+    bottom: -854px;
     left: -78px;
 }
 .about-company-slider .swiper-pagination .swiper-pagination-bullet {
@@ -2866,20 +2874,144 @@ font-size: 20px !important;
 .blog-detail-contact-form {
     margin-top: 30px;
 }
+.rotate-glass{
+    animation:turn2 3s linear 0.1s;
 
+}
+@keyframes turn2{
+    0%{
+        -webkit-transform:translateY(100px);
+        -webkit-transform:translateX(-10.8px);
+
+    }
+   10%, 20%, 40%, 50%, 80%{
+   
+    -webkit-transform:translateY(100px);
+    -webkit-transform:translateX(-10.8px);
+    
+    }
+ 
+100%{
+    -webkit-transform:translateY(170px);
+    -webkit-transform:translateX(-100.8px);
+     
+
+}
+}
+.rotate-plant{
+    animation:turn 3s linear 0.1s;
+    }
+    
+    @keyframes turn{
+        0%{
+            -webkit-transform:translateY(300px);
+            -webkit-transform:translateX(-302.8px);
+            
+        }
+       10%, 20%, 40%, 50%, 80%{
+       
+        -webkit-transform:translateY(100px);
+        -webkit-transform:translateX(-100.8px);
+       
+        }
+     
+    100%{
+        -webkit-transform:translateY(50px);
+        -webkit-transform:translateX(-100.8px);
+        
+
+    }
+    }
+
+
+.images-compare-left-arrow i
+ {
+    animation: bounce 5s ease-in-out infinite;
+  }
+  @keyframes bounce {
+	0%, 20%, 50%, 80%{-webkit-transform: translateX(0);}	
+	40% {-webkit-transform: translateX(-2px);}
+	60% {-webkit-transform: translateX(-5px);}
+    100%{-webkit-transform: translateX(-3px);}
+}
+  @-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%{-webkit-transform: translateX(0);}	
+	40% {-webkit-transform: translateX(-2px);}
+	60% {-webkit-transform: translateX(-5px);}
+    100%{-webkit-transform: translateX(-3px);}
+}
+  /* @keyframes bounce {
+    10%,
+    20%,
+    30%,
+    40%,
+    50% {
+      transform: translateX(0);
+    }
+    15% {
+      transform: translateX(-10px);
+
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    35% {
+      transform: translateX(-5px);
+    }
+    45% {
+      transform: translateX(-2px);
+    }
+  } */
+.images-compare-right-arrow i{
+    animation: bounce 5s ease-in-out infinite;
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%{-webkit-transform: translateX(-2px);}	
+	40% {-webkit-transform: translateX(5px);}
+	60% {-webkit-transform: translateX(3px);}
+    100%{-webkit-transform: translateX(-2px);}
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%{-webkit-transform: translateX(-2px);}	
+	40% {-webkit-transform: translateX(5px);}
+	60% {-webkit-transform: translateX(3px);}
+    100%{-webkit-transform: translateX(-2px);}
+}
+
+  /* @keyframes bounce {
+    10%,
+    20%,
+    30%,
+    40%,
+    50% {
+      transform: translateX(0);
+    }
+    15% {
+      transform: translateX(10px);
+
+    }
+    25% {
+      transform: translateX(2px);
+    }
+    35% {
+      transform: translateX(5px);
+    }
+    45% {
+      transform: translateX(10px);
+    }
+  } */
 /* Large Devices Having Width > 1600px */
 @media only screen and (min-width: 1600px) {
     .container {
         max-width: 1200px;
     }
+   
 }
 @media only screen and (max-width: 1299px) {
    .nav-menu-button {
       right: 15px;
    }
 }
-
-
 /* Smaller Devices Having Width < 1200px */
 @media only screen and (max-width: 1200px) {
 
@@ -2910,7 +3042,6 @@ font-size: 20px !important;
       margin-top: 0;
    }
 }
-
 /* Smaller Devices Having Width < 992px */
 @media only screen and (max-width: 992px) {
 
@@ -3239,12 +3370,43 @@ font-size: 20px !important;
     }
 
 }
-
 /* Smaller Devices Having Width < 768px */
 @media only screen and (max-width: 768px) {
     .plant {
         width: 200px;
         height: 200px;
+        left: 0;
+        top: -38px;
+    }
+    .glasses{
+        width: 166.312px;
+        top: -29px;
+        left: 10%;
+    }   
+    .coffee {
+        width: 181.969px;
+        right: 4px;
+        top: 16%;
+    }
+
+    /* .images-compare-separator{
+        left: 50%!important;
+    } */
+    .colors {
+        width: 411.75px;
+        top: -137px;
+        left: 25%;
+    }
+    .keyboard {
+        width: 309.75px;
+        top: -92px;
+        left: 17%;
+    }
+    .mac2 {
+        width: 313.75px;
+        left: 29.3%;
+        top: -12px;
+
     }
    /*NavBar*/
    .nav-menu-button {

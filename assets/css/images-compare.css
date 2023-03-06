@@ -3,6 +3,8 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
+    max-height: 755px!important;
+    max-width: 1920px!important;
 }
 /* .main-slide1 .images-compare-container .div1{
       background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(166, 166, 166) 100%)!important;
@@ -16,6 +18,12 @@
     z-index: 2;
     pointer-events: none;
     overflow: hidden;
+
+}
+.main-slide1 .images-compare-before {
+    width: 1343.75px!important;
+    height: 756.7px!important;
+    top: 82px;
 }
 
 /* Images compare back element */
@@ -30,16 +38,16 @@
     display: block;
 }
     /* Images compare front element */
-    .images-compare-before {
+    /* .images-compare-before {
         min-height: 100vh!important;
     }
     .images-compare-after {
         min-height: 100vh!important;
-    }
+    } */
     /* Responsive image settings */
-    .images-compare-before img, .images-compare-after img {
+    /* .images-compare-before img, .images-compare-after img {
         min-height: 100vh!important;
-    }
+    } */
 /* Separator (thin vertical blank line) */
 .images-compare-separator {
     position: absolute;
@@ -48,7 +56,7 @@
     z-index: 4;
     left: 0;
     top: 0;
-    width: 2px;
+    width: 1px;
     cursor: all-scroll;
 }
 
@@ -57,7 +65,7 @@
     height: 38px;
     width: 38px;
     position: absolute;
-    left: 675px!important;
+    left: 677px;
     top: 43%;
     margin-left: -22px;
     margin-top: -22px;
@@ -178,8 +186,16 @@ font-size: 30px;
     font-weight: 300 !important;
 }
 
+.main-slide1 .div1.images-compare-before.images-compare-label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
 .images-compare-container .images-compare-label .slider-cap{
     display: inherit;
+    animation: fadeIntext 3s ease-in linear;
+
 }
 
 .images-compare-before .images-compare-label .slider-cap{
@@ -193,6 +209,7 @@ font-size: 30px;
     filter: blur(0px);
     opacity: 1;
     -webkit-font-smoothing: antialiased!important;
+    animation: fadeIntext 1s ease-in linear;
 }
 
 .images-compare-after .images-compare-label .slider-cap{
@@ -207,6 +224,95 @@ font-size: 30px;
     opacity: 1;
 
 }
+.swiper-slide-active .images-compare-after .images-compare-label .slider-cap,
+.swiper-slide-active .images-compare-before .images-compare-label .slider-cap,
+.swiper-slide-active .images-compare-before .images-compare-label .head1,
+.swiper-slide-active .images-compare-after .images-compare-label .head1
+{
+    opacity: 1;
+    animation: fadeIntext 2s ease-in-out 1s;
+    transition:3s;
+}
+@keyframes fadeIntext {
+    0% {
+        opacity: 1;  
+      }
+      
+      100% {
+        opacity: 0;
+      }
+}
+.swiper-slide-active .images-compare-before img{
+    animation: animationFade2 20s linear;
+}
+@keyframes animationFade {
+    0% {
+      transform: scale(1);
+    }
+    
+    10% {
+      transform: scale(1.05);
+    }
+    
+    20% {
+        transform: scale(1.1);
+    }
+    
+     30% {
+        transform: scale(1.15);
+    }
+    
+    40% {
+      transform: scale(1.2);
+    }
+    
+    50% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+    
+    90% {
+      transform: scale(1);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+ .swiper-slide-active .main-slide3 .images-compare-before img{
+    animation: animationFade2 20s linear;
+}
+  @keyframes animationFade2 {
+    40% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    
+    50% {
+      transform: scale(1.2);
+    }
+    
+    60% {
+      transform: scale(1.15);
+    }
+    
+    70% {
+        transform: scale(1.1);
+    }
+    
+    80% {
+        transform: scale(1.05);
+    }
+    
+    90% {
+      transform: scale(1);
+    }
+    
+    100% {
+      transform: scale(1);
+    }
+  }
 /* Banner Button */
 .images-compare-label .learn-more-btn{
     /* background-color: aqua; */
@@ -216,7 +322,7 @@ font-size: 30px;
     z-index: 1;
     padding: 10px;
     border-radius: 5px;
-    pointer-events: none;
+    pointer-events: all;
     display: none;
     font-size: 15 !important;
     font-family: 'Open Sans', sans-serif !important;
@@ -243,12 +349,30 @@ font-size: 30px;
     text-align: center;
     white-space: nowrap;
 }
+.main-slide1 .images-compare-before .images-compare-label .learn-more-btn{
+    left: 44.5%;
+    right: auto;
+    top: 54.1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.main-slide1 .images-compare-after .images-compare-label .learn-more-btn{
+    left: auto;
+    right: 44.5%;
+    top: 65%;
+    color:#ffffff !important;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
 /* ============================== Third Slide =============================== */
 /* Heading */
 .main-slide3 .images-compare-before .images-compare-label .head1{
-    left: 24%;
+    left: 24.5%;
     right: auto;
-    top: 30%;
+    top: 25.3%;
     color:#ffffff !important;
 }
 
@@ -263,19 +387,33 @@ font-size: 30px;
 .main-slide3 .images-compare-before .images-compare-label .slider-cap{
     left: 35.47%;
     right: auto;
-    top: 45%;
+    top: 39%;
     color:#ffffff !important;
 }
 
 .main-slide3 .images-compare-after .images-compare-label .slider-cap{
     left: auto;
     right: 35.4%;
-    top: 45%;
+    top: 46.2%;
     color:#ffffff !important;
 
 }
 
 
+.main-slide1 .images-compare-before .images-compare-label .slider-cap {
+    left: 35.48%;
+    right: auto;
+    top: 44%;
+    color: #ffffff !important;
+}
+
+.main-slide1 .images-compare-after .images-compare-label .slider-cap{
+    left: auto;
+    right: 35.4%;
+    top: 55%;
+    color:#ffffff !important;
+
+}
 /* Banner Button */
 .main-slide3 .images-compare-label .learn-more-btn1,
 .main-slide3 .images-compare-label .learn-more-btn2{
@@ -301,22 +439,22 @@ font-size: 30px;
 .main-slide3 .images-compare-before .images-compare-label .learn-more-btn1{
     left: 40%;
     right: auto;
-    top: 53%;
+    top: 48.9%;
     white-space: nowrap;
     text-align: center;
 }
 .main-slide3 .images-compare-before .images-compare-label .learn-more-btn2{
-    left: 50%;
+    left: 51%;
     right: auto;
-    top: 53%;
+    top: 49%;
     white-space: nowrap;
     text-align: center;
 }
 
 .main-slide3 .images-compare-after .images-compare-label .learn-more-btn1{
     left: auto;
-    right: 50%;
-    top: 53%;
+    right: 51%;
+    top: 58%;
     color:#ffffff !important;
     text-align: center;
     white-space: nowrap;
@@ -324,24 +462,146 @@ font-size: 30px;
 .main-slide3 .images-compare-after .images-compare-label .learn-more-btn2{
     left: auto;
     right: 40%;
-    top: 53%;
+    top: 58.1%;
     color:#ffffff !important;
     text-align: center;
     white-space: nowrap;
 }
 /* Heading */
-.main-slide1 .images-compare-before .images-compare-label .head1{
-    left: 29.8%;
+.main-slide1 .images-compare-before .images-compare-label .head1 {
+    left: 29.37%;
     right: auto;
-    top: 30%;
-    color:#ffffff !important;
+    top: 33.91%;
+    color: #ffffff !important;
 }
-
+.main-slide1 .images-compare-before .images-compare-label .learn-more-btn{
+    left: 44.67%;
+}
 .main-slide1 .images-compare-after .images-compare-label .head1{
     left: auto;
     right:32%;
-    top: 30%;
+    top: 45%;
     color:#ffffff !important;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 1600px) {
+
+  
+    .keyboard{
+        left: 40.6%;
+    }
+    .mac2 {
+        left: 34.6%;
+    }
+    .main-slide1 .images-compare-before .images-compare-label .learn-more-btn {
+        left: 54.58%;
+    }
+    .images-compare-handle{
+        left: 793px;
+    }
+    .colors {
+        left: 66%;
+    }
+    .main-slide3 .images-compare-before .images-compare-label .head1 {
+        left: 28%;
+        
+    }
+    .main-slide3 .images-compare-after .images-compare-label .head1 {
+        right: 29.7%;
+     
+    }
+    .main-slide3 .images-compare-after .images-compare-label .slider-cap {
+        right: 37.7%;
+    }
+    .main-slide3 .images-compare-before {
+        height: 896.33px!important;
+    }
+    .main-slide2 .images-compare-before .images-compare-label .slider-cap {
+        left: 37.8%;
+     
+    }
+    /* ============================== Second Slide =============================== */
+/* Heading */
+.main-slide2 .images-compare-after .images-compare-label .head1 {
+    left: 32%;
+    right: auto;
+    top: 35.5%;
+}
+.main-slide2 .images-compare-before .images-compare-label .head1 {
+    left: 32%;
+}
+
+
+
+/* Caption */
+.main-slide2 .images-compare-after .images-compare-label .slider-cap {
+    right: 37.4%;
+    top: 53.3%;
+}
+.main-slide2  .images-compare-after .images-compare-label .learn-more-btn {
+    right: 45.3%;
+    top: 64.8%;
+}
+.images-compare-before .images-compare-label .learn-more-btn {
+    left: 45.5%;
+
+}
+.images-compare-handle {
+    top: 50%;
+}
+.main-slide3 .images-compare-before .images-compare-label .slider-cap {
+    left: 37.47%;
+}
+}
+@media only screen and (min-width: 1920px) {
+.main-slide1 .images-compare-before .images-compare-label .learn-more-btn {
+    left: 55.29%;
+}
+.keyboard {
+    left: 37%;
+}
+.main-slide1 .images-compare-before .images-compare-label .learn-more-btn {
+    left: 46.4%;
+}
+.mac2 {
+    left: 37%;
+}
+.main-slide1 .images-compare-after .images-compare-label .head1 {
+    right: 36%;
+}
+.main-slide1 .images-compare-after .images-compare-label .slider-cap {
+    right: 39.4%;
+
+}
+.main-slide1 .images-compare-after .images-compare-label .learn-more-btn {
+    right: 46%;
+}
+.main-slide1 .images-compare-before {
+    width: 1902.75px!important;
+}
+.main-slide2 .images-compare-before .images-compare-label .slider-cap {
+    left: 42.5%;
+    top: 37.6%;
+}
+.images-compare-before .images-compare-label .learn-more-btn {
+
+    top: 46%;
+}
+}
+@media only screen and (min-width: 2560px) {
+    .images-compare-container{
+        max-width: 1920px!important;
+    }
+.images-compare-separator{
+    left: 50%;
+}
+.images-compare-handle {
+    left: 812px;
+}
 }
 /* Smaller Devices Having Width < 768px */
 @media only screen and (max-width: 768px) {
@@ -362,17 +622,32 @@ font-size: 30px;
     .main-slide3 .images-compare-before .images-compare-label .slider-cap {
         left: 30.6%;
     }
-    .main-slide3 .images-compare-after .images-compare-label .slider-cap {
-        right: 30.4%;
+    .main-slide1 .images-compare-after .images-compare-label .slider-cap {
+        right: 31.4%;
+        top: 55%;
+    }
+    .main-slide1 .images-compare-after .images-compare-label .learn-more-btn {
+        left: auto;
+        right: 41.5%;
+        top: 69%;
     }
     .images-compare-before .images-compare-label .learn-more-btn {
         left: 40.9%;
         top: 60%;
     }
+    .images-compare-separator{
+        left :386px!important;
+    }
    .images-compare-after .images-compare-label .learn-more-btn {
         right: 40.9%;
         top: 60%;
     }
+
+    .main-slide1 .images-compare-before .images-compare-label .learn-more-btn {
+        left: 23.2%;
+        top: 28.6%;
+    }
+   
     .main-slide3 .images-compare-before .images-compare-label .learn-more-btn2 {
         right: 34%;
         top: 58%;
@@ -405,7 +680,9 @@ font-size: 30px;
         top: 70% !important;
     }
 
-
+    .main-slide1 .images-compare-before{
+        clip: rect(0px, 387px, 313.75px, 0px)!important;
+    }
 }
 /* Smaller Devices Having Width < 414px */
 @media only screen and (max-width: 414px) {
@@ -425,9 +702,11 @@ font-size: 30px;
     }
     .main-slide3 .images-compare-before .images-compare-label .head1 {
         left: 26%;
+        top: 45%;
     }
     .main-slide3 .images-compare-after .images-compare-label .head1 {
         right: 26.5%;
+        top: 45%;
     }
     .images-compare-before .images-compare-label .slider-cap {
         left: 20.55%!important;
@@ -443,7 +722,7 @@ font-size: 30px;
     }
     .images-compare-handle {
         left: 206px!important;
-        top: 48.5%;
+        top: 54.5%;
     }
     .images-compare-before .images-compare-label .learn-more-btn {
         left: 36.9%;
